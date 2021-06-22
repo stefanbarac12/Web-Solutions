@@ -1,0 +1,255 @@
+@import "_starter";
+@import "_mixins";
+
+// Header
+header {
+    @include bg(url(../img/header.jpg), cover);
+    @include flex(center, flex-start, column);
+    padding: 360px 150px;
+
+    h1 {
+        font-size: 6rem;
+        text-shadow: 2px 2px 2px $bela;
+    }
+
+    p {
+        font-size: 1.4rem;
+        color: $bela;
+        width: 40%;
+        padding-bottom: 40px
+    }
+
+    button {
+        @include btn($black, $bela, $bela, $black);
+    }
+}
+
+// Why us
+.why-us {
+    @include flex(center, center);
+    padding: 80px 200px;
+
+    article:first-child {
+        width: 40%;
+        margin-right: 30px;
+
+        h2 {
+            color: $black;
+            margin-bottom: 20px;
+            font-size: 3rem;
+        }
+
+        p {
+            font: size 1.6rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        button {
+            @include btn($tamnoPlava, $bela, $svetloPlava, $bela);
+        }
+    }
+
+    article:last-child {
+        background-color: $svetloPlava;
+        color: $bela;
+        padding: 20px;
+        width: 40%;
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Services
+.services {
+    @include flex(space-between, center);
+    padding: 80px 200px;
+    background-color: $svetloSiva;
+
+    article {
+        width: 30%;
+
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        p {
+            padding: 30px 0;
+        }
+    }
+
+}
+
+// Projects
+.projects {
+    padding: 80px 200px;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    p {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    article {
+        @include flex(space-between, center);
+
+        div {
+            width: 30%;
+           
+            h3 {
+                font-size: 1.6rem;
+                margin-top: 10px;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            button {
+                @include btn($tamnoPlava, $bela, $svetloPlava, $bela);
+            }
+        }
+    }
+}
+
+// Contact
+.contact {
+    padding: 80px 200px;
+    background-color: $svetloPlava;
+    color: $bela;
+    
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+
+    article {
+        @include flex(space-between, center);
+
+        div {
+            width: 30%;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        p:nth-child(2) {
+            margin: 20px 0;
+        }
+    }
+}
+
+// Responsive for mobile
+@media (max-width: 767px) {
+// Header
+    header {
+        @include bg(url(../img/header.jpg), cover, left);
+        padding: 30px 15px;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1rem;
+            width: 60%;
+            padding-bottom: 20px
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 10px;
+        }
+    }
+
+    // Why us
+    .why-us {
+        @include flex(center, center);
+        padding: 80px 40px;
+
+        article:first-child {
+            width: 100%;
+            margin-bottom: 30px;
+
+            button {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+
+        article:last-child {
+            width: 100%;
+        }
+    }
+
+    // Services
+    .services {
+        @include flex(space-between, center, column);
+        padding: 80px 40px;
+
+        article {
+            width: 100%;
+
+            h2 {
+                font-size: 2.5rem;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    // Projects
+    .projects {
+        padding: 80px 40px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        article {
+            @include flex(space-between, center, column);
+
+            div {
+                width: 100%;
+            
+                button {
+                    font-size: 1rem;
+                    padding: 10px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    // Contact
+    .contact {
+        padding: 80px 40px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        article {
+            @include flex(space-between, center, column);
+
+            div {
+                width: 100%;
+            }
+
+            h3 {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+      
